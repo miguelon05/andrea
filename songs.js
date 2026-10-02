@@ -1,5 +1,8 @@
 // Una cita breve por canción; cada crédito enlaza a su fuente.
 const songDeck = [
+{title:'Vivir Dormidos',artist:'Los Flakos',phrase:'Y pasear contigo y vivir dormidos',source:'https://losflakosmx.bandcamp.com/album/los-flakos'},
+{title:'Nora',artist:'Los Flakos',phrase:'Pones todo mi mundo de cabeza',source:'https://losflakosmx.bandcamp.com/track/nora'},
+{title:'El Plan',artist:'Los Flakos',phrase:'El mejor día de toda mi vida',source:'https://www.youtube.com/watch?v=yiFD1wrSP6c'},
 {title:'Siempre Juntos',artist:'Jean Paul Medroa',phrase:'Recuerda que tienes mi corazón',source:'https://jeanpaulmedroa.bandcamp.com/track/siempre-juntos'},
 {title:'Cholita',artist:'Jean Paul Medroa',phrase:'anhelando siempre verte sonreír',source:'https://jeanpaulmedroa.bandcamp.com/track/cholita'},
 {title:'Enamorado',artist:'Jean Paul Medroa',phrase:'Lo hermoso que me haces sentir',source:'https://www.cifraclub.com/jean-paul-medroa/enamorado/'},

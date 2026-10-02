@@ -2,3 +2,10 @@ body{background:#000;color:#f7e8d8}header{border-color:#ffffff20}header span:las
 main{min-width:0}.art{min-width:0}.art.growing .bouquet{width:min(100%,calc(420px * var(--growth,1)))}@media(max-width:700px){.bouquet{width:min(230px,calc(100vw - 30px));height:280px}.art.open{height:300px;min-height:300px}.art.growing .bouquet{width:min(calc(230px * var(--growth,1)),calc(100vw - 30px));height:calc(280px * var(--growth,1))}.art.growing{height:calc(300px * var(--growth,1));min-height:calc(300px * var(--growth,1))}}
 .song-credit{font:12px/1.6 Arial,sans-serif;color:#c49aa5;max-width:370px;margin:-8px 0 20px}@media(max-width:700px){.song-credit{margin-inline:auto}}
 .song-credit{display:block;text-decoration:none}.song-credit:hover{text-decoration:underline}
+/* Composición centrada y espacio real para el crecimiento del ramo. */
+main{display:flex;flex-direction:column;justify-content:center;gap:12px;max-width:850px;min-height:100svh;padding:35px 24px 55px;text-align:center}
+main>section{width:100%}main p,.song-credit{margin-left:auto;margin-right:auto}main p{max-width:490px}.actions{justify-content:center}h1{font-size:clamp(36px,5vw,56px)}
+.art{order:-1;width:100%;height:270px;min-height:270px;margin-inline:auto}.scribble{bottom:0}.art.open,.art.growing{height:auto;min-height:0;padding:12px 0;margin:10px auto;transition:none}
+.bouquet,.art.growing .bouquet{width:calc(290px * var(--growth,1));height:auto;max-width:100%;transition:width .65s ease}
+dialog{text-align:center}dialog p{margin-inline:auto}
+@media(max-width:700px){main{padding:22px 18px 40px}.art{height:235px;min-height:235px}.bouquet,.art.growing .bouquet{width:calc(min(170px,45vw) * var(--growth,1));height:auto}.art.open,.art.growing{height:auto;min-height:0}.letter{width:220px;height:160px}}
