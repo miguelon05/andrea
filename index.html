@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Un cafecito para mi flaquita ♡</title>
+<title>Un cafecito para mi papita ♡</title>
 <meta name="description" content="Un pequeño detalle, hecho con mucho cariño para ti.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='50'%3E💌%3C/text%3E%3C/svg%3E">
 <style>
@@ -11,10 +11,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
+<div id="chase" aria-label="Una sorpresa para mi papita"><button id="open" aria-controls="experience" aria-expanded="false">Presióname</button><p id="chase-status" role="status" aria-live="polite"></p></div><main id="experience" hidden>
 <section>
-<div class="intro" id="intro"><span class="eyebrow">Para mi flaquita</span><h1>No estuve<br>presente hoy,<br><em>pero aquí tienes…</em></h1><p class="sub">Un pedacito de mi cariño, para acompañarte incluso cuando no puedo estar cerquita.</p><button id="open" aria-controls="gift" aria-expanded="false">Presióname <span aria-hidden="true">♡</span></button><div class="hint">Hay algo bonito esperando por ti.</div></div>
-<div class="surprise" id="gift" hidden aria-live="polite"><span class="eyebrow">Una sorpresa solo para ti</span><h1>Un ramo de café,<br><em>y todo mi cariño.</em></h1><p>Porque tú haces mis días más bonitos. Y si pudiera envolverte un abrazo, vendría junto a cada cafecito.</p><p class="note" id="message">Hoy no pude estar contigo, pero no hubo un ratito en el que no pensara en ti.</p><div class="signature">Con amor, para mi flaquita ♡</div><button id="more">Otro poquito de cariño ♡</button></div>
+<div class="intro" id="intro"><span class="eyebrow">Para mi papita</span><h1>No estuve<br>presente hoy,<br><em>pero aquí tienes…</em></h1><p class="sub">Un pedacito de mi cariño, para acompañarte incluso cuando no puedo estar cerquita.</p><div class="hint">Hay algo bonito esperando por ti.</div></div>
+<div class="surprise" id="gift" hidden aria-live="polite"><span class="eyebrow">Una sorpresa solo para las despiertas</span><h1>Un ramo de café,<br><em>y todo mi cariño.</em></h1><p>Porque tú haces mis días más bonitos. Y si pudiera envolverte un abrazo, vendría junto a cada cafecito.</p><p class="note" id="message">Hoy no pude estar contigo, pero no hubo un ratito en el que no pensara en ti.</p><div class="signature">Con amor, para mi papita ♡</div><button id="more">Otro poquito de cariño ♡</button></div>
 </section>
 <div class="art" id="art"><span class="star one" aria-hidden="true">✧</span><span class="star two" aria-hidden="true">✧</span><div class="letter" id="letter" role="img" aria-label="Un sobre con un sello de corazón"><span class="address">Para ti, bonita.</span></div><span class="scribble" id="scribble">Las cosas bonitas también llegan así…</span>
 <svg id="bouquet" class="bouquet" hidden viewBox="0 0 420 470" role="img" aria-label="Ramo de siete paquetes de Nescafé Tradición, entre flores y corazones">
@@ -37,17 +37,18 @@
 <form id="booking-form"><p id="chosen-date" aria-live="polite">Selecciona un día disponible.</p><label for="time">Hora del cafecito</label><select id="time" required disabled></select><button type="submit" id="make-ticket" disabled>Imprimir ticket</button></form>
 <p class="small">El ticket es una invitación: mándamelo para que confirmemos nuestro plan.</p>
 </dialog>
-<dialog id="ticket-dialog" aria-labelledby="ticket-title"><button class="close" id="close-ticket" aria-label="Cerrar ticket">×</button><article id="ticket"><span class="eyebrow">Una cita contigo</span><h2 id="ticket-title">Vale por un café</h2><p>Para mi flaquita, con todo mi cariño.</p><div class="ticket-details"><span>DÍA</span><strong id="ticket-date"></strong><span>HORA · LIMA</span><strong id="ticket-time"></strong></div><p>Incluye cafecito, una buena conversación<br>y un abrazo de esos que no se apuran.</p><p class="send-message">Mándame por washa</p></article><button id="print-ticket">Imprimir / guardar PDF</button><button id="change-date" class="secondary">Cambiar día</button></dialog>
+<dialog id="ticket-dialog" aria-labelledby="ticket-title"><button class="close" id="close-ticket" aria-label="Cerrar ticket">×</button><article id="ticket"><span class="eyebrow">Una cita contigo</span><h2 id="ticket-title">Vale por un café</h2><p>Para mi papita, con todo mi cariño.</p><div class="ticket-details"><span>DÍA</span><strong id="ticket-date"></strong><span>HORA · LIMA</span><strong id="ticket-time"></strong></div><p>Incluye cafecito, una buena conversación<br>y un abrazo de esos que no se apuran.</p><p class="send-message">Mándame por washa</p></article><button id="print-ticket">Imprimir / guardar PDF</button><button id="change-date" class="secondary">Cambiar día</button></dialog>
 <script src="booking.js" defer></script>
 <script src="songs.js"></script>
 <script>
 const openButton=document.getElementById('open');
 let next=0;
 function hearts(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<22;i++){const p=document.createElement('span');p.className='particle';p.textContent=i%3?'♡':'✧';p.style.cssText=`--x:${Math.random()*100}vw;--size:${16+Math.random()*20}px;--duration:${3+Math.random()*3}s;--drift:${Math.random()*140-70}px`;document.body.append(p);p.addEventListener('animationend',()=>p.remove(),{once:true});}}
-openButton.addEventListener('click',()=>{document.getElementById('intro').hidden=true;document.getElementById('letter').hidden=true;document.getElementById('scribble').hidden=true;document.getElementById('gift').hidden=false;document.getElementById('bouquet').removeAttribute('hidden');document.getElementById('art').classList.add('open');openButton.setAttribute('aria-expanded','true');document.getElementById('more').focus({preventScroll:true});hearts();});
+function revealGift(){document.getElementById('experience').hidden=false;document.getElementById('chase').hidden=true;document.getElementById('message').before(document.getElementById('art'));document.getElementById('intro').hidden=true;document.getElementById('letter').hidden=true;document.getElementById('scribble').hidden=true;document.getElementById('gift').hidden=false;document.getElementById('bouquet').removeAttribute('hidden');document.getElementById('art').classList.add('open');openButton.setAttribute('aria-expanded','true');document.getElementById('more').focus({preventScroll:true});window.scrollTo(0,0);}
 document.getElementById('more').addEventListener('click',()=>{const song=songDeck[next++%songDeck.length];document.getElementById('message').textContent='«'+song.phrase+'»';let credit=document.getElementById('song-credit');if(!credit){credit=document.createElement('a');credit.target='_blank';credit.rel='noopener noreferrer';credit.id='song-credit';credit.className='song-credit';document.getElementById('message').after(credit);}credit.textContent=song.title+' · '+song.artist;credit.href=song.source;hearts();});
 </script>
-</body></html>
+<script src="surprise.js"></script></body></html>
+
 
 
 

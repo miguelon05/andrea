@@ -1,7 +1,7 @@
 const more=document.getElementById('more');
 more.textContent='Un poquito de amor';
 let growth=1;
-document.getElementById('open').addEventListener('click',()=>{document.getElementById('message').before(document.getElementById('art'));});
+
 more.addEventListener('click',()=>{growth=Math.min(1.8,growth+.2);const art=document.getElementById('art');art.style.setProperty('--growth',growth);art.classList.add('growing');const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduced)document.getElementById('bouquet').animate([{transform:'scale(.94)'},{transform:'scale(1.04)'},{transform:'scale(1)'}],{duration:650,easing:'ease-out'});art.scrollIntoView({behavior:reduced?'instant':'smooth',block:'center'});});
 const actions=document.createElement('div');actions.className='actions';more.before(actions);actions.append(more);
 const coffeeButton=document.createElement('button');coffeeButton.textContent='Tomar un café';coffeeButton.className='secondary';actions.append(coffeeButton);
@@ -22,3 +22,4 @@ document.getElementById('booking-form').addEventListener('submit',e=>{e.preventD
 document.getElementById('close-ticket').addEventListener('click',()=>ticketDialog.close());
 document.getElementById('print-ticket').addEventListener('click',()=>window.print());
 document.getElementById('change-date').addEventListener('click',()=>{ticketDialog.close();renderCalendar();booking.showModal();});
+

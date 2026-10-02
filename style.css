@@ -9,3 +9,12 @@ main>section{width:100%}main p,.song-credit{margin-left:auto;margin-right:auto}m
 .bouquet,.art.growing .bouquet{width:calc(290px * var(--growth,1));height:auto;max-width:100%;transition:width .65s ease}
 dialog{text-align:center}dialog p{margin-inline:auto}
 @media(max-width:700px){main{padding:22px 18px 40px}.art{height:235px;min-height:235px}.bouquet,.art.growing .bouquet{width:calc(min(170px,45vw) * var(--growth,1));height:auto}.art.open,.art.growing{height:auto;min-height:0}.letter{width:220px;height:160px}}
+#experience[hidden],#chase[hidden]{display:none}
+#chase{position:fixed;inset:0;background:#050304;z-index:20;overflow:hidden}
+#chase #open{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0;min-width:155px;padding:22px 32px;touch-action:manipulation;transition:background .2s,box-shadow .2s;box-shadow:0 0 45px #b75c7130}
+#chase #open:hover{transform:translate(-50%,-50%)}
+#chase #open.catchable{background:#a45165;box-shadow:0 0 45px #d7758c65}
+#chase-status{position:absolute;bottom:22px;left:20px;right:20px;max-width:none;text-align:center;color:#d9a6b1;font:14px/1.6 Georgia,serif;pointer-events:none}
+.coffee-spark{position:fixed;width:24px;height:57px;object-fit:contain;pointer-events:none;z-index:30;clip-path:polygon(10% 3.5%,97% 3%,92% 36%,94% 90%,93% 98.5%,6.5% 99%,8% 88%,11% 35%);animation:coffee-heart 1.2s ease-out forwards}
+@keyframes coffee-heart{0%{transform:translate(-50%,-50%) scale(.3);opacity:1}65%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(var(--spin));opacity:0}}
+.coffee-spark.still{animation:none;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy)))}
