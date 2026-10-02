@@ -15,6 +15,5 @@ dialog{text-align:center}dialog p{margin-inline:auto}
 #chase #open:hover{transform:translate(-50%,-50%)}
 #chase #open.catchable{background:#a45165;box-shadow:0 0 45px #d7758c65}
 #chase-status{position:absolute;bottom:22px;left:20px;right:20px;max-width:none;text-align:center;color:#d9a6b1;font:14px/1.6 Georgia,serif;pointer-events:none}
-.coffee-spark{position:fixed;width:24px;height:57px;object-fit:contain;pointer-events:none;z-index:30;clip-path:polygon(10% 3.5%,97% 3%,92% 36%,94% 90%,93% 98.5%,6.5% 99%,8% 88%,11% 35%);animation:coffee-heart 1.2s ease-out forwards}
-@keyframes coffee-heart{0%{transform:translate(-50%,-50%) scale(.3);opacity:1}65%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(var(--spin));opacity:0}}
-.coffee-spark.still{animation:none;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy)))}
+.coffee-spark{position:fixed;width:24px;height:57px;object-fit:contain;pointer-events:none;z-index:30;clip-path:polygon(10% 3.5%,97% 3%,92% 36%,94% 90%,93% 98.5%,6.5% 99%,8% 88%,11% 35%);will-change:transform,opacity}
+
