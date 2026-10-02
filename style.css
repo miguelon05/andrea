@@ -17,3 +17,4 @@ dialog{text-align:center}dialog p{margin-inline:auto}
 #chase-status{position:absolute;bottom:22px;left:20px;right:20px;max-width:none;text-align:center;color:#d9a6b1;font:14px/1.6 Georgia,serif;pointer-events:none}
 .coffee-spark{position:fixed;width:24px;height:57px;object-fit:contain;pointer-events:none;z-index:30;clip-path:polygon(10% 3.5%,97% 3%,92% 36%,94% 90%,93% 98.5%,6.5% 99%,8% 88%,11% 35%);will-change:transform,opacity}
 
+.coffee-wave{position:fixed;width:160px;height:70px;border:2px solid #e796a7;border-radius:50%;box-shadow:0 0 30px #dc7e9650;pointer-events:none;z-index:29}.coffee-spark{filter:drop-shadow(0 5px 6px #0006);backface-visibility:hidden}
