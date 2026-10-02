@@ -1,0 +1,28 @@
+// Dedicatorias originales inspiradas en los títulos; no son letras de canciones.
+const songDeck = [
+{title:'Siempre Juntos',artist:'Jean Paul Medroa',phrase:'Quiero seguir sumando contigo esos días sencillos que terminan siendo nuestros mejores recuerdos.'},
+{title:'Cholita',artist:'Jean Paul Medroa',phrase:'Me gusta quererte con la ternura de quien encuentra algo bonito incluso en tu forma de saludar.'},
+{title:'Antídoto Y Veneno',artist:'Eddie Santiago',phrase:'Tienes esa manera de alborotarme el pecho y luego calmarlo con una sonrisa.'},
+{title:'No Te Drogues, Bonita',artist:'Loncheras De Perro',phrase:'Cuando todo pese, quiero acompañarte con paciencia, escucharte y compartir un cafecito contigo.'},
+{title:'Those Years Are Over',artist:'The Sha La Das',phrase:'Todavía nos quedan tantos recuerdos por estrenar que me emociona pensar en nuestro próximo día juntos.'},
+{title:'Quiero Morir En Tu Piel',artist:'Willie Gonzalez',phrase:'Si pudiera alargar un momento, elegiría ese en el que me quedo abrazándote sin mirar la hora.'},
+{title:'Cuando Fuimos Nada',artist:'Mi Sobrino Memo',phrase:'Qué bonito pensar que una conversación cualquiera terminó convirtiéndote en alguien tan especial para mí.'},
+{title:'Andrea',artist:'Bad Bunny, Buscabulla',phrase:'Andrea, me encanta conocerte a tu manera y verte elegir las cosas que te hacen feliz.'},
+{title:'De la Nada',artist:'William Luna',phrase:'Sin avisarme, te fuiste haciendo un lugar en mis días; ahora cualquier cosa bonita me recuerda a ti.'},
+{title:'Niñachay',artist:'William Luna',phrase:'Te guardo un cariño suavecito, de esos que se quedan acompañándote aun después de despedirnos.'},
+{title:'Cada Vez Que Digo Adiós',artist:'Los Enanitos Verdes',phrase:'Apenas termina nuestro rato juntos, ya estoy imaginando la próxima excusa para verte.'},
+{title:'My One And Only Love',artist:'Mon Laferte, Natalia Lafourcade, Silvana Estrada',phrase:'Hay muchos planes que suenan bonitos, pero compartirlos contigo es lo que los vuelve especiales.'},
+{title:'Amor',artist:'Emmanuel Cortes',phrase:'Me nace cuidarte en detalles pequeños: acordarme de ti, escucharte y reservarte el último sorbito.'},
+{title:'Khé?',artist:'Rauw Alejandro, Romeo Santos',phrase:'A veces no sé explicar lo que me pasa; solo sé que verte me cambia el día entero.'},
+{title:'Frances Limon',artist:'Los Enanitos Verdes',phrase:'Hasta una tarde común tiene otro sabor cuando apareces tú con tus ocurrencias.'},
+{title:'Corazón',artist:'Danny Ocean',phrase:'Tengo un lugarcito para ti entre mis ganas de verte y todas las cosas que todavía quiero contarte.'},
+{title:'COQUETA',artist:'Fuerza Regida, Grupo Frontera',phrase:'Me basta una miradita tuya para olvidar lo que iba a decir y empezar a sonreír.'},
+{title:'Oh Qué Será?',artist:'Willie Colón',phrase:'No tengo respuesta para todo, pero sí muchas ganas de descubrir contigo lo que viene.'},
+{title:'More Than A Woman',artist:'Bee Gees',phrase:'Admiro tus ideas, tus sueños y esa forma tan tuya de hacer que una conversación se vuelva inolvidable.'},
+{title:'La Muralla Verde',artist:'Los Enanitos Verdes',phrase:'Si hoy nos separa la distancia, que este detalle encuentre un caminito hasta tu sonrisa.'},
+{title:'Te Quiero',artist:'Amén',phrase:'Quiero que lo notes en mis gestos: hacerte espacio, prestarte atención y estar cuando me necesites.'},
+{title:'Tu Misterioso Alguien',artist:'Miranda!',phrase:'Todavía me sorprendes, y me encanta tener tantas cosas tuyas por descubrir.'},
+{title:'Tu Falta De Querer',artist:'Mon Laferte',phrase:'Quiero que entre nosotros siempre haya espacio para decir lo que sentimos y escucharnos con cariño.'},
+{title:'Si Tú Me Quisieras',artist:'Mon Laferte',phrase:'Qué lindo cuando las ganas de vernos se encuentran y una invitación termina en una tarde juntos.'},
+{title:'Otra Noche de Llorar - Spotify Sessions',artist:'Mon Laferte',phrase:'Si alguna noche se te hace larga, aquí tienes compañía, un oído atento y un abrazo pendiente.'}
+];
