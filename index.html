@@ -46,8 +46,9 @@ const openButton=document.getElementById('open');
 let next=0;
 function hearts(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;for(let i=0;i<22;i++){const p=document.createElement('span');p.className='particle';p.textContent=i%3?'♡':'✧';p.style.cssText=`--x:${Math.random()*100}vw;--size:${16+Math.random()*20}px;--duration:${3+Math.random()*3}s;--drift:${Math.random()*140-70}px`;document.body.append(p);p.addEventListener('animationend',()=>p.remove(),{once:true});}}
 openButton.addEventListener('click',()=>{document.getElementById('intro').hidden=true;document.getElementById('letter').hidden=true;document.getElementById('scribble').hidden=true;document.getElementById('gift').hidden=false;document.getElementById('bouquet').removeAttribute('hidden');document.getElementById('art').classList.add('open');openButton.setAttribute('aria-expanded','true');document.getElementById('more').focus({preventScroll:true});hearts();});
-document.getElementById('more').addEventListener('click',()=>{const song=songDeck[next++%songDeck.length];document.getElementById('message').textContent=song.phrase;let credit=document.getElementById('song-credit');if(!credit){credit=document.createElement('div');credit.id='song-credit';credit.className='song-credit';document.getElementById('message').after(credit);}credit.textContent='Inspirado en '+song.title+' · '+song.artist;hearts();});
+document.getElementById('more').addEventListener('click',()=>{const song=songDeck[next++%songDeck.length];document.getElementById('message').textContent='«'+song.phrase+'»';let credit=document.getElementById('song-credit');if(!credit){credit=document.createElement('a');credit.target='_blank';credit.rel='noopener noreferrer';credit.id='song-credit';credit.className='song-credit';document.getElementById('message').after(credit);}credit.textContent=song.title+' · '+song.artist;credit.href=song.source;hearts();});
 </script>
 </body></html>
+
 
 
